@@ -1,0 +1,187 @@
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="yahtzee.css">
+ </head>
+ 
+ <body>
+   
+     <div class="scoreboard">
+         <div class="score-container">
+             <table>
+                 <tr class="name-container">
+                     <th class="name">Player 1</th>
+                     <th class="name">score</th>
+                     <th class="name">Player 2</th>
+                     <th class="name">score</th>
+                 </tr>
+                 <tr>
+                     <td>ones</td>
+                     <td onclick="lockPoints('Ones')" id="player-1-Ones"class="score-cell">0</td>
+                     <td>ones</td>
+                     <td onclick="lockPoints('Ones')" id="player-2-Ones"class="score-cell">0</td>
+                 </tr>
+                 <tr>
+                     <td>twos</td>
+                     <td onclick="lockPoints('Twos')" id="player-1-Twos"class="score-cell">0</td>
+                     <td>twos</td>
+                     <td onclick="lockPoints('Twos')" id="player-2-Twos"class="score-cell">0</td>
+                 </tr>
+                 <tr>
+                     <td>threes</td>
+                     <td onclick="lockPoints('Threes')" id="player-1-Threes" class="score-cell">0</td>
+                     <td>threes</td>
+                     <td onclick="lockPoints('Threes')" id="player-2-Threes" class="score-cell">0</td>
+                 </tr>
+                 <tr>
+                     <td>fours</td>
+                     <td onclick="lockPoints('Fours')" id="player-1-Fours"class="score-cell">0</td>
+                     <td>fours</td>
+                     <td onclick="lockPoints('Fours')" id="player-2-Fours"class="score-cell">0</td>
+                 </tr>
+                 <tr>
+                     <td>fives</td>
+                     <td onclick="lockPoints('Fives')" id="player-1-Fives"class="score-cell">0</td>
+                     <td>fives</td>
+                     <td onclick="lockPoints('Fives')" id="player-2-Fives"class="score-cell">0</td>
+                 </tr>
+                 <tr>
+                     <td>sixes</td>
+                     <td onclick="lockPoints('Sixes')" id="player-1-Sixes"class="score-cell">0</td>
+                     <td>sixes</td>
+                     <td onclick="lockPoints('Sixes')" id="player-2-Sixes"class="score-cell">0</td>
+                 </tr>
+             </table>
+         </div>
+     </div>
+     <div class="total-container">
+         <table>
+             <tr class="name-container">
+                 <th class="name">Player 1</th>
+                 <th class="name">score</th>
+                 <th class="name">Player 2</th>
+                 <th class="name">score</th>
+             </tr>
+             <tr>
+                <td>total</td>
+                <td id="player-1-total" class="total-score">0</td>
+                <td>total</td>
+                <td id="player-2-total" class="total-score">0</td>
+             </tr>
+             <tr>
+                 <td>bonus</td>
+                 <td id="player-1-bonus">0</td>
+                 <td>bonus</td>
+                 <td id="player-2-bonus">0</td>
+             </tr>
+         </table>
+     </div>
+     <div class="second-score-container">
+         <table>
+             <tr class="name-container">
+                 <th class="name">Player 1</th>
+                 <th class="name">score</th>
+                 <th class="name">Player 2</th>
+                 <th class="name">score</th>
+             </tr>
+             <tr>
+                <td>Three of a Kind</td>
+                <td onclick="lockPoints('ThreeofaKind')" id="player-1-ThreeofaKind" class="score-cell">0</td>
+                <td>Three of a Kind</td>
+                <td onclick="lockPoints('ThreeofaKind')" id="player-2-ThreeofaKind" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Four of a Kind</td>
+                <td onclick="lockPoints('FourofaKind')" id="player-1-FourofaKind" class="score-cell">0</td>
+                <td>Four of a Kind</td>
+                <td onclick="lockPoints('FourofaKind')" id="player-2-FourofaKind" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Full House</td>
+                <td onclick="lockPoints('FullHouse')" id="player-1-FullHouse" class="score-cell">0</td>
+                <td>Full House</td>
+                <td onclick="lockPoints('FullHouse')" id="player-2-FullHouse" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Small Straight</td>
+                <td onclick="lockPoints('SmallStraight')" id="player-1-SmallStraight" class="score-cell">0</td>
+                <td>Small Straight</td>
+                <td onclick="lockPoints('SmallStraight')" id="player-2-SmallStraight" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Large Straight</td>
+                <td onclick="lockPoints('LargeStraight')" id="player-1-LargeStraight" class="score-cell">0</td>
+                <td>Large Straight</td>
+                <td onclick="lockPoints('LargeStraight')" id="player-2-LargeStraight" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Chance</td>
+                <td onclick="lockPoints('Chance')" id="player-1-Chance" class="score-cell">0</td>
+                <td>Chance</td>
+                <td onclick="lockPoints('Chance')" id="player-2-Chance" class="score-cell">0</td>
+            </tr>
+            <tr>
+                <td>Yahtzee</td>
+                <td onclick="lockPoints('Yahtzee')" id="player-1-Yahtzee" class="score-cell">0</td>
+                <td>Yahtzee</td>
+                <td onclick="lockPoints('Yahtzee')" id="player-2-Yahtzee" class="score-cell">0</td>
+            </tr>
+         </table>
+     </div>
+     <div>
+         <div class="total-container">
+             <table>
+                 <tr class="name-container">
+                     <th class="name">Player 1</th>
+                     <th class="name">score</th>
+                     <th class="name">Player 2</th>
+                     <th class="name">score</th>
+                 </tr>
+                 <tr>
+                    <td>Total</td>
+                    <td id="player-1-total2" class="total2-score">0</td>
+                    <td>Total</td>
+                    <td id="player-2-total2" class="total2-score">0</td>
+                </tr>
+                <tr>
+                    <td>Grand Total</td>
+                    <td id="player-1-Grand-Total" class="Grand-total">0</td>
+                    <td>Grand Total</td>
+                    <td id="player-2-Grand-Total" class="Grand-total">0</td>
+                </tr>
+             </table>
+         </div>
+</div>
+     </div>
+ 
+     <div class="play-container">
+        <div>
+            <button onclick="rollDice()" class="rollButton" id="rollButton">Roll</button>
+         </div> 
+         <div onclick="lockDice('dice-1')" class="die-container die1-container">
+            <img src="../images/dice-1.png" class="dice-1 dice" id="dice-1">
+         </div>
+         <div onclick="lockDice('dice-2')" class="die-container die2-container">
+             <img src="../images/dice-2.png" class="dice-2 dice" id="dice-2">
+         </div>
+         <div onclick="lockDice('dice-3')" class="die-container die3-container">
+             <img src="../images/dice-3.png" class="dice-3 dice" id="dice-3">
+         </div>
+         <div onclick="lockDice('dice-4')" class="die-container die4-container">
+             <img src="../images/dice-4.png" class="dice-4 dice" id="dice-4">
+         </div>
+         <div onclick="lockDice('dice-5')" class="die-container die5-container">
+             <img src="../images/dice-5.png" class="dice-5 dice" id="dice-5">
+         </div>
+     </div>
+
+     <script src="yahtzee.js"></script>
+     
+ </body>
+ </html>
